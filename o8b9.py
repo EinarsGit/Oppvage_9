@@ -29,18 +29,18 @@ class QuizTest:
         else:
             return False
     
-    def Endeligsum(Poeng,SpNr):
+    def Endeligsum(Poeng,SpNr): # Oppgave 9f
         if Totaltspr == len(Rett_svar):
             Endeligsum = (Poeng/Totaltspr)*100
             print("-----------------------------------")
             print(f"Spiller {SpNr} fikk {Endeligsum:.1f}% riktig.")
             
-    def korrekt_svar_tekst():
+    def korrekt_svar_tekst(): # Oppgave 9e
         Svarnr = int(Rett_svar[Totaltspr-1])
         Fasit = Svaralternativ[Totaltspr-1]
         print(f"Riktig svar var: {Fasit[Svarnr]}")
             
-def Sporsmaalfunk():
+def Sporsmaalfunk(): # Oppgave 9d
     with open("sporsmaalsfil.txt", "r", encoding="UTF-8") as rf:
         Quiz = []
         for line in rf:
@@ -56,12 +56,10 @@ def Sporsmaalfunk():
                 
             Svaralternativ.append(Svarliste)
             
-            #for ans in separate[2].strip("[]").split(","):
-            #    Svaralternativ.append(ans)
             Quiz.append(QuizTest(Sporsmaal,Svaralternativ,Rett_svar))
         return Sporsmaal, Rett_svar, Svaralternativ
 
-if __name__ == '__main__':
+if __name__ == '__main__': # Oppgave 9f
     Spiller1 = 0
     Spiller2 = 0
     Sporsmaal = []
