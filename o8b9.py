@@ -23,7 +23,7 @@ class QuizTest:
                 x+= str(Qnr)+". "+str(i)+"\n"
         return f"{x}"
     
-    def svarsjekk(Bruker):
+    def svarsjekk(self, Bruker):
         if Bruker-1 == Rett_svar[Totaltspr-1]:
             return True
         else:
